@@ -1,0 +1,84 @@
+package calculator;
+import java.util.Scanner;
+
+public class Calculator {
+
+	private static Scanner wow;
+
+	public static void main(String[] args) {
+		Scanner wow = new Scanner(System.in);
+		
+		System.out.println("Enter the first number :- ");
+		float first = wow.nextFloat();	
+		
+		System.out.println("Enter the second number :-");
+		float second = wow.nextFloat();	
+		
+		
+		System.out.println("Enter the Specific Number for an operator:-\n"
+				+ "1.Multiplication \n 2.Divide \n 3.Addition \n "
+				+ "4.Subtration \n\n 5.Square \n 6.cube \n\n 7.Square root " );
+		char operator = wow.next().charAt(0);
+		double result;
+		
+		switch(operator) {
+		
+		//general operations
+		//starts from here
+				
+		case '1':
+		double multi= first * second;
+		System.out.println("The Answer is " +multi);
+		break;
+		
+		case '2':
+		double divide= first / second;
+		System.out.println("The Answer is " +divide);
+		break;
+		
+		case '3':
+		double add= first + second;
+		System.out.println("The Answer is " +add);
+		break;
+
+		case '4':
+		double sub= first - second;
+		System.out.println("The Answer is " +sub);
+		break;
+		//general operation ends here
+		
+		//Upper cut Stars from here
+		case '5':
+		double sqr= first * first;
+		System.out.println("The Answer is " +sqr);
+		double sqr2= second * second;
+		System.out.println("The Answer is " +sqr2);
+		break;
+		
+		case '6':
+		double cube=first*first*first;
+		System.out.println("The cube of first number is " +cube);
+		double cube2=second*second*second;
+		System.out.println("The cube of first number is " +cube2);
+		//upper cuts ends here
+		
+		
+		case '7':
+		System.out.println("Enter The Number Whose Square root you want to have :=");
+		double number = wow.nextFloat();	
+		double squareRoot = Math.sqrt(number);
+        System.out.println("number : "+number);
+        System.out.println("Square Root : "+squareRoot);
+        break;
+        
+  
+	default:
+	System.out.println("Invalid ");
+		}
+	}
+
+	public void setDefaultCloseOperation(int exitOnClose) {
+		// TODO Auto-generated method stub
+		
+	}
+}	
